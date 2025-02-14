@@ -14,9 +14,10 @@ public class RadixSort<T extends Comparable<T>> implements ISort<T> {
         }
         radixSort(intArray);
 
-        for (int i = 0; 1 < array.length; i++) {
-            array[i] = (T) Integer.valueOf(intArray[i]);
-
+        if (!array[0].getClass().equals(Integer.class)) {
+            throw new UnsupportedOperationException("RadixSort solo funciona con Integer"); // fue la unica solicion que
+                                                                                            // encontre para quitar este
+                                                                                            // warning
         }
     }
 

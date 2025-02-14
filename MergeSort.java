@@ -1,6 +1,6 @@
-public class MergeSort <T extends Comparable<T>> implements ISort<T> {
+public class MergeSort<T extends Comparable<T>> implements ISort<T> {
     @Override
-    public void sort(T[] array){
+    public void sort(T[] array) {
         if (array == null || array.length < 2) {
             return;
         }
@@ -15,6 +15,7 @@ public class MergeSort <T extends Comparable<T>> implements ISort<T> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void merge(T[] array, int left, int mid, int right) {
         int leftSize = mid - left + 1;
         int rightSize = right - mid;

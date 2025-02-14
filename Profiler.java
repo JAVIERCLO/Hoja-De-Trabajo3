@@ -2,15 +2,15 @@ public class Profiler {
     private long startTime;
     private long endTime;
 
-    public void startTime(){
-        startTime = System.currentTimeMillis();
+    public void startTime() {
+        startTime = System.nanoTime();
     }
 
-    public void stopTime(){
-        endTime = System.currentTimeMillis();
+    public void stopTime() {
+        endTime = System.nanoTime();
     }
 
-    public double getTime(){
+    public double getTime() {
         return (endTime - startTime);
     }
 
